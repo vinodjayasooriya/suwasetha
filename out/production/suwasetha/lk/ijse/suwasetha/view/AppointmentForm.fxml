@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="414.0" prefWidth="679.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.suwasetha.controller.AppointmentFormController">
+   <children>
+      <JFXButton buttonType="RAISED" layoutX="23.0" layoutY="22.0" onAction="#btnBacToHom" prefHeight="45.0" prefWidth="59.0" style="-fx-background-color: #34495e;" text="&lt;" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="133.0" layoutY="22.0" prefHeight="45.0" prefWidth="363.0" text="Appointment Form">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="572.0" layoutY="22.0" onAction="#btnNew" prefHeight="31.0" prefWidth="92.0" style="-fx-background-color: #2980b9;" text="+ new" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TextField fx:id="txtappid" layoutX="24.0" layoutY="80.0" promptText="AppID">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </TextField>
+      <JFXDatePicker fx:id="txtdate" layoutX="224.0" layoutY="79.0" overLay="true" prefHeight="18.0" prefWidth="182.0" promptText="Date" />
+      <JFXComboBox fx:id="colpatient" labelFloat="true" layoutX="25.0" layoutY="122.0" prefHeight="28.0" prefWidth="181.0" promptText="Patient" />
+      <TextField fx:id="txtpatientname" layoutX="225.0" layoutY="121.0" promptText="name">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtpatientemail" layoutX="415.0" layoutY="121.0" prefHeight="30.0" prefWidth="252.0" promptText="email">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </TextField>
+      <JFXComboBox fx:id="coldoctor" labelFloat="true" layoutX="23.0" layoutY="171.0" prefHeight="28.0" prefWidth="181.0" promptText="Doctor" />
+      <TextField fx:id="txtdoctornae" layoutX="223.0" layoutY="170.0" promptText="name">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtxtdoctoremail" layoutX="413.0" layoutY="170.0" prefHeight="30.0" prefWidth="252.0" promptText="email">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </TextField>
+      <ImageView fx:id="imgview" fitHeight="138.0" fitWidth="138.0" layoutX="23.0" layoutY="210.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/doctor.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="window" layoutX="196.0" layoutY="210.0" prefHeight="191.0" prefWidth="414.0" style="-fx-background-color: #ecf0f1;">
+         <children>
+            <JFXTimePicker fx:id="txtfromtime" defaultColor="#460404" layoutX="14.0" layoutY="11.0" promptText="From Time" />
+            <JFXTimePicker fx:id="txttotime" defaultColor="#2c0303" layoutX="249.0" layoutY="11.0" promptText="To Time" />
+            <JFXButton buttonType="RAISED" layoutX="83.0" layoutY="51.0" onAction="#btnCheckAvailable" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: #27ae60;" text="Check Availability" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label fx:id="txtstate" layoutX="167.0" layoutY="103.0" text="State">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <JFXButton buttonType="RAISED" layoutX="329.0" layoutY="135.0" onAction="#btnOpenPaymentForm" prefHeight="30.0" prefWidth="122.0" style="-fx-background-color: #2980b9;" text="Payment" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

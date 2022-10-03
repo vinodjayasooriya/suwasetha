@@ -1,0 +1,48 @@
+CREATE DATABASE suwasetha;
+#------------------------------------------
+USE suwasetha;
+#------------------------------------------
+CREATE TABLE patient(
+nic VARCHAR(20),
+name VARCHAR(50),
+contact VARCHAR(20),
+address TEXT,
+gender ENUM('MALE','FEMALE','OTHER'),
+age INT,
+email TEXT,
+CONSTRAINT PRIMARY KEY (nic)
+);
+#------------------------------------------
+CREATE TABLE doctor(
+d_id VARCHAR(20),
+name VARCHAR(50),
+address TEXT,
+contact VARCHAR(20),
+email TEXT,
+image TEXT,
+CONSTRAINT PRIMARY KEY(d_id)
+);
+#------------------------------------------
+CREATE TABLE appointment(
+appid VARCHAR(20),
+date DATE,
+from_time TIME,
+to_time TIME,
+state TINYINT,
+d_id VARCHAR(20),
+nic VARCHAR(20),
+CONSTRAINT PRIMARY KEY(appid),
+CONSTRAINT FOREIGN KEY(d_id) REFERENCES doctor(d_id) ON DELETE CASCADE ON UPDATE CASCADE,
+CONSTRAINT FOREIGN KEY(nic) REFERENCES patient(nic) ON DELETE CASCADE ON UPDATE CASCADE
+);
+#------------------------------------------
+CREATE TABLE payment(
+invoiceid INT AUTO_INCREMENT PRIMARY KEY,
+date DATE,
+time TIME,
+cost DECIMAL(10,2),
+method VARCHAR(20),
+appid VARCHAR(20),
+CONSTRAINT FOREIGN KEY(appid) REFERENCES appointment(appid) ON DELETE CASCADE ON UPDATE CASCADE
+);
+#------------------------------------------

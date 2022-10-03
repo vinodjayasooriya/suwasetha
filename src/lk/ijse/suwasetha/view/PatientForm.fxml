@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="window" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="644.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.suwasetha.controller.PatientFormController">
+   <children>
+      <JFXButton buttonType="RAISED" layoutX="23.0" layoutY="22.0" onAction="#btnBacToHome" onMouseClicked="#btnBacToHome" prefHeight="45.0" prefWidth="59.0" style="-fx-background-color: #34495e;" text="&lt;" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="133.0" layoutY="22.0" prefHeight="45.0" prefWidth="223.0" text="Patient Form">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="478.0" layoutY="26.0" onAction="#btnnew" prefHeight="33.0" prefWidth="139.0" style="-fx-background-color: #2980b9;" text="+ New" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXTextField fx:id="txtnic" labelFloat="true" layoutX="44.0" layoutY="98.0" prefHeight="28.0" prefWidth="177.0" promptText="NIC">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtname" labelFloat="true" layoutX="239.0" layoutY="98.0" prefHeight="28.0" prefWidth="177.0" promptText="Name">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtage" labelFloat="true" layoutX="44.0" layoutY="153.0" prefHeight="30.0" prefWidth="120.0" promptText="Age">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnsave" buttonType="RAISED" layoutX="40.0" layoutY="250.0" onAction="#btnSaveOnAction" prefHeight="31.0" prefWidth="112.0" style="-fx-background-color: #27ae60;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TextField fx:id="txtsearch" layoutX="164.0" layoutY="252.0" prefHeight="28.0" prefWidth="437.0" promptText="Search here" />
+      <TableView fx:id="tbl" layoutX="36.0" layoutY="287.0" prefHeight="173.0" prefWidth="575.0">
+         <columns>
+            <TableColumn fx:id="colid" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="colname" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="coladdress" prefWidth="75.0" text="Address" />
+            <TableColumn fx:id="colemail" prefWidth="75.0" text="E-mail" />
+            <TableColumn fx:id="colcontact" prefWidth="98.0" text="Contact" />
+            <TableColumn fx:id="colage" prefWidth="77.0" text="Age" />
+            <TableColumn fx:id="coloperate" prefWidth="97.0" text="Operate" />
+         </columns>
+      </TableView>
+      <JFXTextField fx:id="txtcontact" labelFloat="true" layoutX="429.0" layoutY="98.0" prefHeight="28.0" prefWidth="177.0" promptText="Contact">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="colgender" labelFloat="true" layoutX="174.0" layoutY="154.0" prefHeight="28.0" prefWidth="158.0" promptText="Gender" />
+      <JFXTextField fx:id="txtemail" labelFloat="true" layoutX="348.0" layoutY="153.0" prefHeight="30.0" prefWidth="259.0" promptText="E-mail">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtaddress" labelFloat="true" layoutX="40.0" layoutY="214.0" prefHeight="30.0" prefWidth="565.0" promptText="Address">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXTextField>
+   </children>
+</AnchorPane>

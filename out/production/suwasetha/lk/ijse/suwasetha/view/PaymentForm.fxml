@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="window" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="241.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.suwasetha.controller.PaymentFormController">
+   <children>
+      <Label layoutX="24.0" layoutY="16.0" text="Payment Form">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtinvoice" layoutX="28.0" layoutY="57.0" prefHeight="28.0" prefWidth="169.0" promptText="Invoice">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtappid" layoutX="214.0" layoutY="57.0" prefHeight="28.0" prefWidth="169.0" promptText="App Id">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtcost" layoutX="401.0" layoutY="57.0" prefHeight="34.0" prefWidth="188.0" promptText="Cost">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtdate" layoutX="28.0" layoutY="102.0" prefHeight="28.0" prefWidth="169.0" promptText="Date">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txttime" layoutX="214.0" layoutY="102.0" prefHeight="28.0" prefWidth="169.0" promptText="Time">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </TextField>
+      <JFXComboBox fx:id="colmethod" labelFloat="true" layoutX="401.0" layoutY="105.0" prefHeight="28.0" prefWidth="196.0" promptText="Method" />
+      <TextField fx:id="txtcash" layoutX="28.0" layoutY="149.0" prefHeight="28.0" prefWidth="169.0" promptText="Cash">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtbalance" layoutX="214.0" layoutY="149.0" prefHeight="28.0" prefWidth="169.0" promptText="Balance">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </TextField>
+      <JFXButton buttonType="RAISED" layoutX="28.0" layoutY="196.0" onAction="#btncancel" style="-fx-background-color: #e67e22;" text="Cancel" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="116.0" layoutY="196.0" onAction="#btnpay" prefHeight="36.0" prefWidth="81.0" style="-fx-background-color: #2980b9;" text="Pay" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
